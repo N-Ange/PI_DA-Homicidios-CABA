@@ -1,6 +1,6 @@
-## Homicidios por siniestros viales en la Ciudad Autónoma de Buenos Aires
+# Homicidios por siniestros viales en la Ciudad Autónoma de Buenos Aires
 
-# Introuccion
+## Introuccion
 
 Proyecto que simula el rol de Data Analist que forma parte del equipo de analistas que lleva a cabo una consultoria para el Observatorio de Movilidad y Seguridad Vial (OMSV), el centro de estuddios que se encuentra bajo la orbita de la Secretaria de Transporte del Gobierno de la Ciudad Autonoma de Buenos Aires(CABA) 
 
@@ -11,7 +11,7 @@ La Ciudad Autónoma de Buenos Aires, que se ubica en la provincia de Buenos Aire
 Actualmente, según el censo poblacional realizado en el año 2022, la población de CABA es de 3,120,612 de habitantes en una superficie de 200 km cuadrados
 , lo que implica una densidad de aproximadamente 15,603 hab/ km cuadrado. Sumado a esto, el Julio de 2023 se registraron 12,437,735 de vehículos transitando por los peajes de las autopistas de acceso a CABA. Por lo que la prevención de siniestros viales y la implementación de políticas efectivas son esenciales para abordar este problema de manera adecuada.
 
-# Datos
+## Datos
 
 Para este proyecto se trabajó con la Bases de Víctimas Fatales en Siniestros Viales que se encuentra en formato de Excel y contiene dos pestañas de datos:
 
@@ -19,13 +19,16 @@ HECHOS: que contiene una fila de hecho con id único y las variables temporales,
 VICTIMAS: contiene una fila por cada víctima de los hechos y las variables edad, sexo y modo de desplazamiento asociadas a cada víctima. Se vincula a los HECHOS mediante el id del hecho.
 En este documento se detallan todas las definiciones manejadas en los datos y en el desarrollo de este proyecto. Por otra parte, en este link se encuentran los datos utilizados en el análisis.
 
-# ETL y EDA
+## ETL y EDA
 
 En primer lugar, se realizó un proceso de extracción, transformación y carga de los datos (ETL), tanto de "HECHOS" como "VÍCTIMAS", donde se estandarizaron nombres de las variables, se analizaron nulos y duplicados de los registros, se eliminaron columnas redundantes o con muchos valores faltantes, entre otras tareas. Una vez finalizado este proceso para los dos conjuntos de datos de "Homicidios" se procedió a unir los dos conjuntos en uno solo denominado df_homicidios.
 
-En segundo lugar, se procedió a realizar un análisis exploratorio exahustivo (EDA), con la finalidad de encontrar patrones que permitan generar información que le permita a las autoridades locales tomar medidas para disminuir la cantidad de víctimas fatales de los siniestros viales.
+[ETL](https://github.com/N-Ange/PI_DA-Homicidios-CABA/blob/main/Jupyter/01_ETL.ipynb) 
 
-# Analisis de Datos
+En segundo lugar, se procedió a realizar un análisis exploratorio exahustivo (EDA), con la finalidad de encontrar patrones que permitan generar información que le permita a las autoridades locales tomar medidas para disminuir la cantidad de víctimas fatales de los siniestros viales.
+[EDA](https://github.com/N-Ange/PI_DA-Homicidios-CABA/blob/main/Jupyter/02_EDA.ipynb)
+
+## Analisis de Datos
 
 Lo primero que se analizó fue variable temporal, para entender la distribución de los homicidios en distintas escalas temporales. La distribución anual de la cantidad de víctimas fatales es de alrededor del 60% para los primeros 3 años del conjunto de datos, con una disminución marcada para el 2020 como consecuencia de la cuarentena por COVID 19. El comportamiento a lo largo del año, es decir, la variación mensual, si bien para todo el conjunto de datos es marcada, con un pico de víctimas en Diciembre, esta tendencia no se observa tan claramente entre los distintos años. Este resultado de la mayor cantidad de víctimas en Diciembre está influenciada por la flexibilización de las medidas tomadas por la cuarentena.
 
@@ -41,7 +44,7 @@ Asimismo, si se analiza la responsabilidad en el hecho, es decir, el vehículo q
 
 Por último, se buscaron patrones en la distribución espacial de los hechos. Lo que se destaca de este análisis, es que en todas las comunas de CABA se presenta como factor común los accidentes en las avenidas, que son vías arteriales de calzada ancha, de por lo menos 13 metros. El 62% de las víctimas perdió la vida en avenidas. En particular, en el 82% ocurrió en el cruce de las avenidas con otra calle. Esta es un comportamiento que se mantiene entre los distintos años. En cuanto al rol de la víctima al momento del hecho, en las distintas comunas varía entre moto y peatón.
 
-# Kpi 
+## Kpi 
 
 * *Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior*
 
@@ -74,3 +77,7 @@ En función de lo anterior, se hacen las siguientes recomendaciones:
 * Reforzar las campañas de seguridad vial entre los días viernes a lunes, intensificando particularmente en el mes de Diciembre.
 * Puntualizar campañas de conducción segura en avenidas y cruces de calles.
 * Dirigir las campañas de seguridad hacia el sexo masculino, especialmente en cuanto a conducción en moto, para un rango etario entre los 15 a 44 años.
+
+
+### Enlaces utiles:
+Link a mi perfil de [Linkedin](https://www.linkedin.com/in/nadirangelini/)
